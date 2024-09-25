@@ -150,6 +150,61 @@ body {
   font-weight: bolder;
 }
 
+.about_us {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100vw;
+  height: 900px;
+  margin-top: 100px;
+}
+
+.about_title {
+  font-size: 4.5rem;
+  line-height: 1;
+  color: white;
+  font-family: "Luckiest Guy", sans-serif;
+  height: 150px;
+  width: 100%;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  background-color: #ee6a43;
+  display: flex;
+}
+
+.about1 {
+  width: 100%;
+  display: flex;
+}
+
+.about2 {
+  width: 100%;
+  display: flex;
+  margin-top: 50px;
+  text-align: right;
+}
+
+.about_text {
+  font-family: "Poppins", sans-serif;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 50px 0 50px;
+  color: #9e122c;
+  font-size: 1.5rem; /* 24px */
+  line-height: 2rem; /* 32px */
+}
+
+.about_image {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 @media (max-width: 1024px) {
   .navbar_menu {
     display: none;
