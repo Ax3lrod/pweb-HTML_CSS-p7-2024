@@ -1,94 +1,248 @@
 <!DOCTYPE html>
 <head>
-    <title>Contact Us</title>
-    <link rel="stylesheet" href="contact.css">
-    <!-- Lucky Guy Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap"
-      rel="stylesheet"
-    />
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="contact.css" />
+  <!-- Lucky Guy Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap"
+    rel="stylesheet"
+  />
 
-    <!-- Poppins Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-      rel="stylesheet"  
-    />
+  <!-- Poppins Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet"
+  />
 </head>
 
 <body>
-    <section class="navbar">
-        <div class="navbar_title">Yumochi</div>
-        <div class="navbar_menu">
-            <a href="/index.html">ABOUT US</a>
-            <a href="/menu.html">OUR MENU</a>
-          <p>CONTACT US</p>
-        </div>
-        <button class="menu_button" onclick="toggleSidebar()">☰</button>
-      </section>
+  <section class="navbar">
+    <div class="navbar_title">Yumochi</div>
+    <div class="navbar_menu">
+      <a href="index.html">ABOUT US</a>
+      <a href="menu.html">OUR MENU</a>
+      <a href="contact-us.html">CONTACT US</a>
+    </div>
+    <button class="menu_button" onclick="toggleSidebar()">☰</button>
+  </section>
 
-      <section class="display">
-      <div class ="contact-card">
-        <h2>Find Us on</h2>
-        <div>
-          <div class="display1">
-            <div class ="display">
-                <img src="images/Phone call.png" width="40px" height="40px" class="object-contain"/>
-                <p>031-XXX-XX</p>
-            </div>
+  <div class="sidebar" id="sidebar">
+    <button class="close_button" onclick="toggleSidebar()">×</button>
+    <div class="sidebar_menu">
+      <a href="index.html">ABOUT US</a>
+      <a href="menu.html">OUR MENU</a>
+      <a href="contact-us.html">CONTACT US</a>
+    </div>
+  </div>
 
-            <div class ="display">
-              <img src="images/image 3.png" width="50px" height="55px" class="object-contain"/>
-              <p>YUMOCHI <br>by pemweb</p>
-            </div>
-          </div>
-            
-          <div class="display2">
-            <div class ="display-wa">
-              <img src="images/image 5.png" width="60px" height="60px" class="object-contain"/>
-              <a href="wa.me/6281230556626">0812-3055-6626</a>
-            </div>
-
-            <div class = "display">
-                <img src="images/image 4.png" width="70px" height="50px" class="object-contain"/>
-                <p>YUMOCHI<br>by pemweb</p>
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-      <div class ="telephone">
-        <img src="images/telephone.png" width="350px" height="350px" class="object-contain"/>
-      </div>
-    </section>
-
-    <section class="footer">
-      <div class="block1">
-        <h2>YUMOCHI</h2>
-        <div class="sosmed">
-            <img src="images/Phone call.png" width="25px" height="25px" class="object-contain"/>
+  <section class="contact_us">
+    <div class="contact-card">
+      <h2>Find Us on</h2>
+      <div class="contacts">
+        <div class="display1">
+          <div class="display">
+            <img
+              src="images/Phone call.png"
+              width="40px"
+              height="40px"
+              class="object-contain"
+            />
             <p>031-XXX-XX</p>
+          </div>
+
+          <div class="display">
+            <img
+              src="images/image 3.png"
+              width="50px"
+              height="55px"
+              class="object-contain"
+            />
+            <p>YUMOCHI <br />by pemweb</p>
+          </div>
         </div>
-        <div class="sosmed">
-            <img src="images/Instagram.png" width="25px" height="25px" class="object-contain"/>
-            <p>yumochi.id</p>
+
+        <div class="display2">
+          <div class="display-wa">
+            <img
+              src="images/image 5.png"
+              width="60px"
+              height="60px"
+              class="object-contain"
+            />
+            <a href="wa.me/6281230556626">0812-3055-6626</a>
+          </div>
+
+          <div class="display">
+            <img
+              src="images/image 4.png"
+              width="70px"
+              height="50px"
+              class="object-contain"
+            />
+            <p>YUMOCHI<br />by pemweb</p>
+          </div>
         </div>
-        <div class="sosmed">
-            <img src="images/Twitter.png" width="25px" height="25px" class="object-contain"/>
-            <p>yumochi.id</p>
+      </div>
+    </div>
+
+    <div class="telephone">
+      <img
+        src="images/telephone.png"
+        width="350px"
+        height="350px"
+        class="object-contain"
+      />
+    </div>
+  </section>
+
+  <section class="contact_us_mobile">
+    <div class="telephone">
+      <img
+        src="images/telephone.png"
+        width="350px"
+        height="350px"
+        class="object-contain"
+      />
+    </div>
+    <div class="contact-card">
+      <h2>Find Us on</h2>
+      <div class="contacts">
+        <div class="display1">
+          <div class="display">
+            <img
+              src="images/Phone call.png"
+              width="40px"
+              height="40px"
+              class="object-contain"
+            />
+            <p>031-XXX-XX</p>
+          </div>
+
+          <div class="display">
+            <img
+              src="images/image 3.png"
+              width="50px"
+              height="55px"
+              class="object-contain"
+            />
+            <p>YUMOCHI <br />by pemweb</p>
+          </div>
         </div>
+
+        <div class="display2">
+          <div class="display-wa">
+            <img
+              src="images/image 5.png"
+              width="60px"
+              height="60px"
+              class="object-contain"
+            />
+            <a href="wa.me/6281230556626">0812-3055-6626</a>
+          </div>
+
+          <div class="display">
+            <img
+              src="images/image 4.png"
+              width="70px"
+              height="50px"
+              class="object-contain"
+            />
+            <p>YUMOCHI<br />by pemweb</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="footer">
+    <div class="block1">
+      <h2>YUMOCHI</h2>
+      <div class="sosmed">
+        <img
+          src="images/Phone call.png"
+          width="25px"
+          height="25px"
+          class="object-contain"
+        />
+        <p>031-XXX-XX</p>
+      </div>
+      <div class="sosmed">
+        <img
+          src="images/Instagram.png"
+          width="25px"
+          height="25px"
+          class="object-contain"
+        />
+        <p>yumochi.id</p>
+      </div>
+      <div class="sosmed">
+        <img
+          src="images/Twitter.png"
+          width="25px"
+          height="25px"
+          class="object-contain"
+        />
+        <p>yumochi.id</p>
+      </div>
     </div>
 
     <div class="block2">
-        <div class="footer-social">
-            <a href="/index.html">HOME</a>
-            <a href="/menu.html">OUR MENU</a>
-            <a href="/contact-us.html">CONTACT US</a>
-        </div>
+      <div class="footer-social">
+        <a href="/index.html">HOME</a>
+        <a href="/menu.html">OUR MENU</a>
+        <a href="/contact-us.html">CONTACT US</a>
+      </div>
     </div>
-    </section>
+  </section>
+
+  <section class="footer_mobile">
+    <div class="block1_mobile">
+      <div class="footer_title_mobile">
+        <h2>YUMOCHI</h2>
+      </div>
+      <div class="footer_contact_mobile">
+        <div class="sosmed_mobile">
+          <img
+            src="images/Phone call.png"
+            width="25px"
+            height="25px"
+            class="object-contain"
+          />
+          <p>031-XXX-XX</p>
+        </div>
+        <div class="sosmed_mobile">
+          <img
+            src="images/Instagram.png"
+            width="25px"
+            height="25px"
+            class="object-contain"
+          />
+          <p>yumochi.id</p>
+        </div>
+        <div class="sosmed_mobile">
+          <img
+            src="images/Twitter.png"
+            width="25px"
+            height="25px"
+            class="object-contain"
+          />
+          <p>yumochi.id</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="block2_mobile">
+      <div class="footer-social_mobile">
+        <a href="index.html">HOME</a>
+        <a href="menu.html">OUR MENU</a>
+        <a href="#">CONTACT US</a>
+      </div>
+    </div>
+  </section>
+
+  <script src="scripts.js"></script>
 </body>

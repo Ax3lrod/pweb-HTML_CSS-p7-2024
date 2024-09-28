@@ -1,161 +1,223 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
-    background-color: #FCECDF;
-    color: #333;
-    padding: 20px;
+  background-color: #fcecdf;
+  color: #333;
+  padding: 0;
+  overflow-x: hidden;
+  margin: 0;
 }
 
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 30px;
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  scale: 1.1;
+  transition: 0.3s;
+}
+
+.footer a:hover {
+  scale: 1.1;
+  transition: 0.3s;
 }
 
 .navbar {
-    width: 100%;
-    font-family: "Luckiest Guy";
-    display: flex;
-    justify-content: space-between;
-    height: 100px;
-    align-items: center;
-    color: #9e122c;
-    padding: 0 20px;
-    box-sizing: border-box;
-    z-index: 20;
-    position: relative;
-  }
-  
-  .navbar_menu {
-    width: 100%;
-    display: flex;
-    background-color: #fbcb77;
-    height: 68px;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 50px;
-    border-radius: 50px;
-    font-size: 1.5rem;
-    line-height: 2rem;
-    font-family: "Luckiest Guy";
-  }
-  
-  .navbar_title {
-    font-size: 4.5rem;
-    line-height: 1;
-    width: 100%;
-    text-align: center;
-    font-family: "Luckiest Guy";
-  }
-  
-  .navbar p {
-    cursor: pointer;
-    font-family: "Luckiest Guy";
-  }
-  
-  .menu_button {
-    display: none;
-    background: none;
-    border: none;
-    font-size: 2rem;
-    color: #9e122c;
-    cursor: pointer;
-  }
-  
-  .sidebar {
-    position: fixed;
-    top: 0;
-    right: -300px;
-    width: 300px;
-    height: 100%;
-    background-color: #fbcb77;
-    transition: right 0.3s ease-in-out;
-    padding: 20px;
-    box-sizing: border-box;
-    font-family: "Luckiest Guy";
-    color: #9e122c;
-    z-index: 1000;
-  }
-  
-  .sidebar.open {
-    right: 0;
-  }
-  
-  .close_button {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background: none;
-    border: none;
-    font-size: 2rem;
-    color: #9e122c;
-    cursor: pointer;
-  }
-  
+  width: 100%;
+  font-family: "Luckiest Guy";
+  display: flex;
+  justify-content: space-between;
+  height: 100px;
+  align-items: center;
+  color: #9e122c;
+  padding: 0 20px;
+  box-sizing: border-box;
+  z-index: 20;
+  position: relative;
+}
+
+.navbar_menu {
+  width: 100%;
+  display: flex;
+  background-color: #fbcb77;
+  height: 68px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+  border-radius: 50px;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-family: "Luckiest Guy";
+}
+
+.navbar_title {
+  font-size: 4.5rem;
+  line-height: 1;
+  width: 100%;
+  text-align: center;
+  font-family: "Luckiest Guy";
+}
+
+.navbar p {
+  cursor: pointer;
+  font-family: "Luckiest Guy";
+}
+
+.menu_button {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #9e122c;
+  cursor: pointer;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -300px;
+  width: 300px;
+  height: 100%;
+  background-color: #fbcb77;
+  transition: right 0.3s ease-in-out;
+  padding: 20px;
+  box-sizing: border-box;
+  font-family: "Luckiest Guy";
+  color: #9e122c;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar_menu {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
+.sidebar.open {
+  right: 0;
+}
+
+.close_button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #9e122c;
+  cursor: pointer;
+}
 
 h1 {
-    font-size: 36px;
-    color: #b02927;
+  font-size: 36px;
+  color: #b02927;
 }
 
 .menu {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100vw;
+  margin-top: 50px;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
+.menu_grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px;
+  justify-items: center; /* Center each product item inside the grid */
+  align-items: center; /* Align items vertically */
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* Product styling */
 .product {
-    background-color: #EE6A43;
-    padding: 20px;
-    border-radius: 50px;
-    text-align: center;
-    width: 320px;
-    height: 410px;
+  background-color: #ee6a43;
+  padding: 20px;
+  border-radius: 50px;
+  text-align: center;
+  width: 100%;
+  max-width: 320px;
+  height: 450px;
+  transition: transform 0.3s ease; /* Adds smooth animation */
+}
+
+.product:hover {
+  transform: scale(1.05); /* Increases the size on hover */
 }
 
 .product img {
-    max-width: 100%;
-    border-radius: 50px;
+  max-width: 100%;
+  border-radius: 50px;
+  margin-bottom: 20px;
 }
 
 .product h2 {
-    font-family: "Luckiest Guy";
-    font-size: 30px;
-    margin: 2px 0;
-    color: #9E122C;
+  font-family: "Luckiest Guy";
+  font-size: 30px;
+  margin: 2px 0;
+  color: #9e122c;
 }
 
-.product h4{
-    font-family: "Poppins";
-    color: black;
+.product h4 {
+  font-family: "Poppins";
+  color: black;
 }
 
 .product p {
-    color: #000;
-    font-family: "Poppins";
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;    
+  color: #000;
+  font-family: "Poppins";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
 }
 
-.block1 h2 {
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .menu_grid {
+    grid-template-columns: repeat(2, 1fr); /* Two columns for medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .menu_grid {
+    grid-template-columns: 1fr; /* Single column for small screens */
+    justify-items: center; /* Ensures the single-column layout stays centered */
+    gap: 30px;
+  }
+}
+
+.footer {
+  width: 100vw;
+  margin-top: 50px;
+  @media (max-width: 1024px) {
+    display: none;
+  }
+}
+
+.footer_mobile {
+  display: none;
+}
+
+.footer h2 {
   font-family: "Luckiest Guy";
 }
 
 .block1 {
-  background-color: #FBCB77;
-  width: 100%;
-  padding: 5px;
+  background-color: #fbcb77;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  column-gap: 200px;
   align-items: center;
-  height: 50px;
+  height: 60px;
+  color: #9e122c;
 }
 
 .sosmed {
@@ -169,17 +231,17 @@ h1 {
 
 .block2 {
   display: flex;
-  background-color: #9E122C;
-  width: 100%;
+  background-color: #9e122c;
   padding: 10px;
   font-family: "Poppins";
   font-weight: 800;
   justify-content: center;
   align-items: center;
+  color: #fbcb77;
 }
 
 .block2 a:link {
-  color:#FBCB77;
+  color: #fbcb77;
 }
 
 .footer-social {
@@ -188,5 +250,80 @@ h1 {
   justify-content: center;
   text-align: center;
   display: flex;
-  column-gap: 50px;
+  column-gap: 80px;
+}
+
+@media (max-width: 1024px) {
+  .navbar_menu {
+    display: none;
+  }
+
+  .navbar_title {
+    font-size: 1.875rem; /* 30px */
+    line-height: 2.25rem; /* 36px */
+    text-align: left;
+  }
+
+  .menu_button {
+    display: block;
+  }
+
+  .footer_mobile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    width: 100vw;
+    overflow: hidden;
+  }
+
+  .block1_mobile {
+    background-color: #fbcb77;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    font-family: "Luckiest Guy";
+    color: #9e122c;
+  }
+
+  .footer_contact_mobile {
+    display: flex;
+    flex-direction: row;
+    column-gap: 20px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .sosmed_mobile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .block2_mobile {
+    display: flex;
+    width: 100%;
+    background-color: #9e122c;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    font-family: "Poppins";
+    font-weight: bold;
+    height: 50px;
+  }
+
+  .footer-social_mobile {
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    column-gap: 20px;
+  }
+
+  .block2_mobile a:link {
+    color: #fbcb77;
+  }
 }

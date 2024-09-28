@@ -5,6 +5,21 @@ body {
   overflow-x: hidden;
 }
 
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  scale: 1.1;
+  transition: 0.3s;
+}
+
+.footer a:hover {
+  scale: 1.1;
+  transition: 0.3s;
+}
+
 .navbar {
   width: 100%;
   font-family: "Luckiest Guy";
@@ -65,6 +80,15 @@ body {
   font-family: "Luckiest Guy";
   color: #9e122c;
   z-index: 1000;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar_menu {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
 }
 
 .sidebar.open {
@@ -98,13 +122,15 @@ body {
 .hero_button {
   background-color: #fbcb77;
   color: #9e122c;
-  font-size: 2rem;
+  font-size: 1.5rem;
+  font-family: Poppins;
   padding: 20px 20px;
   border: none;
   border-radius: 50px;
   cursor: pointer;
   width: 232px;
   margin-top: -50px;
+  font-weight: bold;
 }
 
 .hero_button:hover {
@@ -157,6 +183,7 @@ body {
   width: 100vw;
   height: fit-content;
   margin-top: 100px;
+  font-weight: 500;
 }
 
 .about_title {
@@ -209,18 +236,253 @@ body {
   display: none;
 }
 
+.gallery {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  width: 100vw; /* Ensure the container doesn't overflow */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  padding: 0;
+  box-sizing: border-box; /* Prevent margin/padding overflow */
+}
+
+.gallery img {
+  width: 100%;
+  display: block; /* Ensures the margin works correctly */
+  margin: 0 auto; /* Centers the image horizontally */
+  transition: transform 0.3s ease; /* Adds smooth transition */
+}
+
+.gallery img:hover {
+  transform: scale(1.1); /* Zooms in the image by 10% */
+}
+
+.gallery_title {
+  font-size: 4.5rem;
+  line-height: 1;
+  color: white;
+  font-family: "Luckiest Guy", sans-serif;
+  height: 150px;
+  width: 100%;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  background-color: #ee6a43;
+  display: flex;
+}
+
+.gallery_row_1 {
+  width: 50%;
+  @media (max-width: 1024px) {
+    width: 80%;
+    flex-direction: column;
+  }
+  gap: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.gallery_row_2 {
+  width: 50%;
+  display: flex;
+  gap: 50px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  @media (max-width: 1024px) {
+    width: 80%;
+    flex-direction: column;
+  }
+  justify-content: center;
+  align-items: center;
+}
+
+/* Default styles for large screens */
+.testimonial {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  overflow-x: hidden;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.testimonial_title {
+  font-size: 4.5rem;
+  line-height: 1;
+  color: white;
+  font-family: "Luckiest Guy", sans-serif;
+  height: 150px;
+  width: 100%;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  background-color: #ee6a43;
+  display: flex;
+}
+
+.testimonial_row {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+  @media (max-width: 1024px) {
+    flex-direction: column;
+  }
+}
+
+.testimonial_container {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-top: 50px;
+  padding: 0 50px;
+  @media (max-width: 1024px) {
+    margin-top: 100px;
+  }
+}
+
+.testimonial_container img {
+  position: absolute;
+  top: -80px;
+}
+
+.testimonial_card {
+  width: 100%;
+  max-width: 400px;
+  @media (max-width: 768px) {
+    max-width: 300px;
+  }
+  height: fit-content;
+  min-height: 300px;
+  background-color: #fbcb77;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 20px 20px 20px;
+  margin: 0 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.testimonial_container:hover {
+  transition: transform 0.3s;
+  transform: translate(0, -10px);
+}
+
+.testimonial_text {
+  font-family: "Poppins", sans-serif;
+  color: #9e122c;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  text-align: center;
+  margin-top: 20px;
+  @media (max-width: 768px) {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+
+.testimonial_name {
+  font-family: "Luckiest Guy", sans-serif;
+  color: #9e122c;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  text-align: center;
+}
+
+/* Media queries for smaller screens */
+
+/* For tablets and small laptops (768px to 1024px) */
+@media (max-width: 1024px) {
+  .testimonial_title {
+    font-size: 3rem; /* Reduce the title size */
+    height: 100px;
+  }
+
+  .testimonial_container {
+    padding: 0 30px;
+  }
+
+  .testimonial_card {
+    padding: 60px 15px 15px;
+  }
+
+  .testimonial_text {
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+  }
+
+  .testimonial_name {
+    font-size: 1.3rem;
+  }
+}
+
+/* For mobile devices (480px to 767px) */
+@media (max-width: 767px) {
+  .testimonial_title {
+    font-size: 2.5rem; /* Further reduce title size */
+    height: 80px;
+  }
+
+  .testimonial_row {
+    flex-direction: column; /* Stack testimonials vertically */
+    margin-top: 50px;
+  }
+
+  .testimonial_container {
+    padding: 0 20px;
+  }
+
+  .testimonial_card {
+    padding: 40px 10px 10px;
+  }
+
+  .testimonial_text {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
+  .testimonial_name {
+    font-size: 1.1rem;
+  }
+}
+
+.footer {
+  width: 100vw;
+  margin-top: 50px;
+  @media (max-width: 1024px) {
+    display: none;
+  }
+}
+
+.footer_mobile {
+  display: none;
+}
+
 .footer h2 {
-  font-family: 'Luckiest Guy';
+  font-family: "Luckiest Guy";
 }
 
 .block1 {
-  background-color: #FBCB77;
-  width: 100%;
-  padding: 5px;
+  background-color: #fbcb77;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  column-gap: 200px;
   align-items: center;
-  height: 50px;
+  height: 60px;
+  color: #9e122c;
 }
 
 .sosmed {
@@ -234,17 +496,17 @@ body {
 
 .block2 {
   display: flex;
-  background-color: #9E122C;
-  width: 100%;
+  background-color: #9e122c;
   padding: 10px;
   font-family: "Poppins";
   font-weight: 800;
   justify-content: center;
   align-items: center;
+  color: #fbcb77;
 }
 
 .block2 a:link {
-  color:#FBCB77;
+  color: #fbcb77;
 }
 
 .footer-social {
@@ -294,6 +556,13 @@ body {
     cursor: pointer;
     width: 200px;
     margin-top: -20px;
+    font-weight: bold;
+    font-family: Poppins;
+  }
+
+  .hero_button_mobile:hover {
+    background-color: #9e122c;
+    color: #fcecdf;
   }
 
   .navbar_title {
@@ -370,5 +639,64 @@ body {
     justify-content: center;
     background-color: #ee6a43;
     display: flex;
+  }
+
+  .footer_mobile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    width: 100vw;
+    overflow: hidden;
+  }
+
+  .block1_mobile {
+    background-color: #fbcb77;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    font-family: "Luckiest Guy";
+    color: #9e122c;
+  }
+
+  .footer_contact_mobile {
+    display: flex;
+    flex-direction: row;
+    column-gap: 20px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .sosmed_mobile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .block2_mobile {
+    display: flex;
+    width: 100%;
+    background-color: #9e122c;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    font-family: "Poppins";
+    font-weight: bold;
+    height: 50px;
+  }
+
+  .footer-social_mobile {
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    column-gap: 20px;
+  }
+
+  .block2_mobile a:link {
+    color: #fbcb77;
   }
 }
