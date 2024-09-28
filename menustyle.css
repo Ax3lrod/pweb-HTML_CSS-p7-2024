@@ -130,13 +130,12 @@ h1 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 50px;
-  justify-items: center; /* Center each product item inside the grid */
-  align-items: center; /* Align items vertically */
+  justify-items: center;
+  align-items: center;
   width: 100%;
   max-width: 1200px;
 }
 
-/* Product styling */
 .product {
   background-color: #ee6a43;
   padding: 20px;
@@ -145,11 +144,11 @@ h1 {
   width: 100%;
   max-width: 320px;
   height: 450px;
-  transition: transform 0.3s ease; /* Adds smooth animation */
+  transition: transform 0.3s ease;
 }
 
 .product:hover {
-  transform: scale(1.05); /* Increases the size on hover */
+  transform: scale(1.05);
 }
 
 .product img {
@@ -179,17 +178,16 @@ h1 {
   line-height: normal;
 }
 
-/* Responsive Design */
 @media (max-width: 1024px) {
   .menu_grid {
-    grid-template-columns: repeat(2, 1fr); /* Two columns for medium screens */
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (max-width: 768px) {
   .menu_grid {
-    grid-template-columns: 1fr; /* Single column for small screens */
-    justify-items: center; /* Ensures the single-column layout stays centered */
+    grid-template-columns: 1fr;
+    justify-items: center;
     gap: 30px;
   }
 }
