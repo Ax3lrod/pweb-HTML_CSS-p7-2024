@@ -185,7 +185,7 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  min-height: 100vh;
   @media (max-width: 1024px) {
     display: none;
   }
@@ -198,6 +198,7 @@ h1 {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    min-height: 100vh;
   }
 }
 
